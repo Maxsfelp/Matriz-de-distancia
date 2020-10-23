@@ -30,9 +30,6 @@ for i in range(0, (G.number_of_nodes()-1)):
 	menor = 999999
 	maior = 0
 
-print(somatorio)
-pd.DataFrame(matrix_dist).to_csv("matrix.csv", header=None, index=None)
-
 nx.draw(G, with_labels=True, font_weight='bold', width=1)
 plt.savefig("grafo.png", dpi=100)
 plt.show()
