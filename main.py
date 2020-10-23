@@ -16,9 +16,9 @@ menor = 99999
 maior = 0
 soma = 0
 
-for i in range(0, (G.number_of_nodes()-1)):
+for i in range(0, (G.number_of_nodes())):
 	for j in range(0, (G.number_of_nodes()-1)):
-		if(matrix_dist[i][j] < menor):
+		if(matrix_dist[i][j] < menor and i != j):
 			menor = matrix_dist[i][j]
 		if(matrix_dist[i][j] > maior):
 			maior = matrix_dist[i][j]
@@ -30,6 +30,6 @@ for i in range(0, (G.number_of_nodes()-1)):
 	menor = 999999
 	maior = 0
 
-nx.draw(G, with_labels=True, font_weight='bold', width=1)
-plt.savefig("grafo.png", dpi=100)
-plt.show()
+print(maximo)
+print(minimo)
+print(somatorio)
